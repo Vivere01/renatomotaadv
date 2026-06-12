@@ -5,17 +5,16 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Source+Serif+4:wght@600;700&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         .hero-gradient {
-            background: linear-gradient(to right, rgba(4, 22, 39, 0.95) 0%, rgba(4, 22, 39, 0.7) 100%);
+            background: linear-gradient(to right, rgba(12, 35, 64, 0.95) 0%, rgba(12, 35, 64, 0.7) 100%);
         }
         .service-card:hover {
             transform: translateY(-4px);
-            border-color: #775a19;
+            border-color: #2563eb;
         }
         .smooth-transition {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -27,59 +26,60 @@
             theme: {
                 extend: {
                     "colors": {
-                        "on-secondary-container": "#785a1a",
-                        "on-tertiary-fixed-variant": "#005322",
-                        "surface": "#f8f9fa",
-                        "on-primary-fixed": "#0b1d2d",
-                        "inverse-primary": "#b7c8de",
-                        "outline-variant": "#c4c6cd",
-                        "tertiary-fixed-dim": "#3de273",
-                        "on-tertiary-container": "#00a74c",
-                        "surface-container-low": "#f3f4f5",
-                        "outline": "#74777d",
-                        "secondary": "#775a19",
+                        "on-secondary-container": "#1e40af",
+                        "on-tertiary-fixed-variant": "#1e3a8a",
+                        "surface": "#ffffff",
+                        "on-primary-fixed": "#0c1e36",
+                        "inverse-primary": "#bfdbfe",
+                        "outline-variant": "#dbeafe",
+                        "tertiary-fixed-dim": "#3b82f6",
+                        "on-tertiary-container": "#25d366", // WhatsApp Green
+                        "surface-container-low": "#f8fafc",
+                        "outline": "#475569",
+                        "secondary": "#2563eb", // Blue Accent
                         "error": "#ba1a1a",
-                        "on-secondary-fixed": "#261900",
+                        "on-secondary-fixed": "#172554",
                         "error-container": "#ffdad6",
-                        "background": "#f8f9fa",
-                        "primary-fixed": "#d2e4fb",
-                        "surface-dim": "#d9dadb",
-                        "tertiary-fixed": "#66ff8e",
-                        "on-primary-container": "#8192a7",
-                        "on-background": "#191c1d",
-                        "on-secondary-fixed-variant": "#5d4201",
-                        "secondary-fixed-dim": "#e9c176",
-                        "surface-variant": "#e1e3e4",
-                        "secondary-container": "#fed488",
-                        "primary": "#041627",
-                        "inverse-surface": "#2e3132",
-                        "primary-container": "#1a2b3c",
-                        "on-tertiary-fixed": "#002109",
-                        "surface-container-highest": "#e1e3e4",
+                        "background": "#ffffff",
+                        "primary-fixed": "#dbeafe",
+                        "surface-dim": "#f1f5f9",
+                        "tertiary-fixed": "#93c5fd",
+                        "on-primary-container": "#1e40af",
+                        "on-background": "#0c2340",
+                        "on-secondary-fixed-variant": "#1e3a8a",
+                        "secondary-fixed-dim": "#93c5fd",
+                        "surface-variant": "#f0f7ff",
+                        "secondary-container": "#dbeafe",
+                        "primary": "#0c2340", // Deep Corporate Navy Blue
+                        "inverse-surface": "#0f172a",
+                        "primary-container": "#f0f7ff",
+                        "on-tertiary-fixed": "#1e3a8a",
+                        "surface-container-highest": "#cbd5e1",
                         "on-tertiary": "#ffffff",
-                        "on-surface": "#191c1d",
+                        "on-surface": "#0c2340",
                         "on-primary": "#ffffff",
-                        "inverse-on-surface": "#f0f1f2",
-                        "primary-fixed-dim": "#b7c8de",
-                        "surface-tint": "#4f6073",
-                        "surface-container": "#edeeef",
-                        "tertiary": "#001a06",
-                        "surface-container-high": "#e7e8e9",
-                        "secondary-fixed": "#ffdea5",
+                        "inverse-on-surface": "#f8fafc",
+                        "primary-fixed-dim": "#bfdbfe",
+                        "surface-tint": "#2563eb",
+                        "surface-container": "#f0f7ff",
+                        "tertiary": "#1e3a8a",
+                        "surface-container-high": "#e2e8f0",
+                        "secondary-fixed": "#bfdbfe",
                         "on-error-container": "#93000a",
-                        "tertiary-container": "#003111",
-                        "surface-bright": "#f8f9fa",
+                        "tertiary-container": "#128c7e", // Hover WhatsApp Green
+                        "surface-bright": "#ffffff",
                         "on-secondary": "#ffffff",
-                        "on-surface-variant": "#44474c",
-                        "on-primary-fixed-variant": "#38485a",
+                        "on-surface-variant": "#475569",
+                        "on-primary-fixed-variant": "#1e3a8a",
                         "surface-container-lowest": "#ffffff",
                         "on-error": "#ffffff"
                     },
                     "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                        "DEFAULT": "0.375rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
                     },
                     "spacing": {
                         "gutter": "24px",
@@ -115,46 +115,67 @@
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- TopNavBar -->
-<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<header class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-outline-variant/50">
 <nav class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
-<div class="font-display-lg text-headline-md tracking-tighter text-primary">RENATO MOTA</div>
+<a href="#" class="font-display-lg text-headline-md tracking-tighter text-primary">RENATO MOTA</a>
 <!-- Desktop Navigation -->
 <div class="hidden md:flex items-center gap-stack-lg">
-<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#about">About</a>
-<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#services">Services</a>
-<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#contact">Contact</a>
-<button class="bg-secondary text-on-secondary px-6 py-2 rounded-lg font-button hover:bg-on-secondary-container smooth-transition scale-95 active:scale-90">
-                    Free Consultation
-                </button>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#about">Sobre</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#services">Especialidades</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors" href="#contact">Contato</a>
+<a class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-button hover:bg-primary smooth-transition scale-95 hover:scale-100 active:scale-95 shadow-sm text-center" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer">
+                    Consulta Gratuita
+                </a>
 </div>
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-primary" id="mobile-menu-btn">
-<span class="material-symbols-outlined">menu</span>
+<button class="md:hidden text-primary p-2 rounded-lg hover:bg-slate-100 transition-colors" id="mobile-menu-btn" aria-label="Menu de Navegação">
+<span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </nav>
+<!-- Mobile Navigation Dropdown -->
+<div id="mobile-menu" class="hidden md:hidden bg-white border-b border-outline-variant/30 py-4 px-gutter flex flex-col gap-4 shadow-lg">
+    <a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors py-1" href="#about">Sobre</a>
+    <a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors py-1" href="#services">Especialidades</a>
+    <a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors py-1" href="#contact">Contato</a>
+    <a href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer" class="bg-secondary text-on-secondary px-6 py-2.5 rounded-lg font-button text-center hover:bg-primary smooth-transition shadow-sm">
+        Consulta Gratuita
+    </a>
+</div>
 </header>
 <main class="pt-16">
 <!-- Hero Section -->
-<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-primary">
-<!-- Background Image -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden bg-primary py-12 md:py-0">
+<!-- Background Image (Themis Statue) -->
 <div class="absolute inset-0 z-0">
-<img alt="Renato Mota" class="w-full h-full object-cover object-top opacity-40 md:opacity-100 md:ml-[30%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSX1TFCXLKZ8URII4wrsZ3FJ4AKF-jHhYEqEL2YgKSPV3p0OFY6Glnz6ttsN4Zi-m5tuPGsRgFpag_LV7qUcCDGr6LNzq2j88fdvzw0rr0aZZpHG8tApjHjF3hLe5mk7IyG4nHa6hpjmRVIyNr3nlnrxorQgEij_Mo_XoO0dRHRzGEuICM5Bot5Z5EeVpOtKyU9UnQ7Okby2OgGUTMMunaMDzf5q4a4bSNMFuyr5dn8Y55pE0L6AEMbhPNi9OKb0osxs9UOrY05Rw">
-<div class="absolute inset-0 hero-gradient md:bg-gradient-to-r md:from-primary md:via-primary/80 md:to-transparent"></div>
+<img alt="Estátua de Têmis" class="w-full h-full object-cover object-center opacity-15 select-none pointer-events-none" src="themis_statue.png">
+<div class="absolute inset-0 hero-gradient md:bg-gradient-to-r md:from-primary md:via-primary/90 md:to-transparent"></div>
 </div>
 <div class="relative z-10 px-gutter max-w-container-max mx-auto w-full">
-<div class="max-w-2xl text-on-primary">
-<span class="inline-block font-label-caps text-label-caps text-secondary-fixed mb-stack-md bg-secondary/20 px-3 py-1 rounded">ESPECIALISTA EM DIREITO DO TRABALHO</span>
-<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg">Protegendo Seus Direitos e Garantindo Sua Justiça no Trabalho.</h1>
-<p class="font-body-lg text-body-lg text-on-primary-container mb-stack-lg">Representação jurídica de elite para trabalhadores que buscam o que é justo. Atuação estratégica em causas trabalhistas complexas.</p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="inline-flex items-center justify-center gap-2 bg-on-tertiary-container text-on-tertiary px-8 py-4 rounded-lg font-button hover:bg-tertiary-container smooth-transition shadow-md hover:shadow-xl group" href="https://wa.me/yourlink">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
-                            Falar via WhatsApp
-                        </a>
-<button class="inline-flex items-center justify-center gap-2 border border-outline-variant text-on-primary px-8 py-4 rounded-lg font-button hover:bg-surface-variant/10 smooth-transition">
-                            Conheça as Especialidades
-                        </button>
-</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+    <!-- Left Column (Content) -->
+    <div class="md:col-span-7 text-on-primary">
+        <span class="inline-block font-label-caps text-label-caps text-secondary-fixed mb-stack-md bg-secondary/20 px-3 py-1 rounded">ESPECIALISTA EM DIREITO DO TRABALHO</span>
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg leading-tight">Protegendo Seus Direitos e Garantindo Sua Justiça no Trabalho.</h1>
+        <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-stack-lg leading-relaxed">Representação jurídica de elite para trabalhadores que buscam o que é justo. Atuação estratégica em causas trabalhistas complexas.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a class="inline-flex items-center justify-center gap-2 bg-on-tertiary-container text-on-tertiary px-8 py-4 rounded-lg font-button hover:bg-tertiary-container smooth-transition shadow-md hover:shadow-xl group scale-100 hover:scale-[1.02] active:scale-95" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer">
+                <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.452 5.421 1.453 5.431 0 9.849-4.409 9.852-9.843.002-2.633-1.02-5.107-2.879-6.969-1.859-1.862-4.332-2.885-6.966-2.886-5.438 0-9.855 4.41-9.858 9.845-.001 1.96.512 3.878 1.488 5.584l-.975 3.561 3.658-.96zM18.252 15.01c-.342-.172-2.029-.999-2.336-1.112-.307-.113-.53-.169-.753.169-.223.338-.863 1.092-1.058 1.316-.195.225-.39.25-.732.079-.342-.172-1.442-.53-2.748-1.696-1.016-.906-1.702-2.026-1.901-2.364-.199-.338-.02-.52.151-.69.154-.154.342-.399.513-.599.17-.199.227-.342.342-.57.114-.227.057-.426-.029-.597-.085-.17-.753-1.812-1.03-2.482-.27-.648-.54-.56-.753-.56-.195-.005-.419-.006-.643-.006-.223 0-.586.084-.892.422-.306.338-1.17 1.144-1.17 2.788 0 1.644 1.196 3.23 1.363 3.455.167.225 2.353 3.593 5.7 5.039.797.344 1.418.549 1.902.705.801.254 1.531.218 2.107.132.642-.096 2.029-.828 2.312-1.629.283-.8 1.252-2.88 1.252-2.88z"/>
+                </svg>
+                Falar via WhatsApp
+            </a>
+            <a class="inline-flex items-center justify-center gap-2 border border-outline-variant text-on-primary px-8 py-4 rounded-lg font-button hover:bg-white/10 smooth-transition" href="#services">
+                Conheça as Especialidades
+            </a>
+        </div>
+    </div>
+    
+    <!-- Right Column (Doctor Photo Frame) -->
+    <div class="md:col-span-5 flex justify-center md:justify-end">
+        <div class="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-[320px] lg:w-96 lg:h-[380px] rounded-2xl overflow-hidden border-4 border-white shadow-2xl bg-[#0a182d] smooth-transition hover:scale-[1.02] duration-500">
+            <img src="renato_mota.jpg" alt="Dr. Renato Mota" class="w-full h-full object-cover object-center select-none">
+        </div>
+    </div>
 </div>
 </div>
 </section>
@@ -163,23 +184,23 @@
 <div class="px-gutter max-w-container-max mx-auto">
 <div class="text-center mb-16">
 <h2 class="font-display-lg text-headline-md text-primary mb-4">Especialidades Jurídicas</h2>
-<div class="h-1 w-24 bg-secondary mx-auto"></div>
+<div class="h-1.5 w-24 bg-secondary mx-auto rounded-full"></div>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
 <!-- Service 1 -->
-<div class="service-card p-8 bg-surface-container-lowest border border-outline-variant smooth-transition flex flex-col h-full transition-all duration-700 opacity-100 translate-y-0">
+<div class="service-card p-8 bg-surface-container-low border border-outline-variant rounded-2xl smooth-transition flex flex-col h-full transition-all duration-700 opacity-100 translate-y-0">
 <span class="material-symbols-outlined text-secondary text-4xl mb-6">schedule</span>
 <h3 class="font-headline-md text-primary mb-4 text-2xl">Horas Extras</h3>
 <p class="font-body-md text-on-surface-variant flex-grow">Recuperação de valores não pagos por jornadas estendidas, intervalos não gozados e bancos de horas irregulares.</p>
 </div>
 <!-- Service 2 -->
-<div class="service-card p-8 bg-surface-container-lowest border border-outline-variant smooth-transition flex flex-col h-full transition-all duration-700 opacity-100 translate-y-0">
+<div class="service-card p-8 bg-surface-container-low border border-outline-variant rounded-2xl smooth-transition flex flex-col h-full transition-all duration-700 opacity-100 translate-y-0">
 <span class="material-symbols-outlined text-secondary text-4xl mb-6">person_cancel</span>
 <h3 class="font-headline-md text-primary mb-4 text-2xl">Demissão Imotivada</h3>
 <p class="font-body-md text-on-surface-variant flex-grow">Análise rigorosa de verbas rescisórias, multas e reversão de justa causa indevidamente aplicada.</p>
 </div>
 <!-- Service 3 -->
-<div class="service-card p-8 bg-surface-container-lowest border border-outline-variant smooth-transition flex flex-col h-full transition-all duration-700 opacity-100 translate-y-0">
+<div class="service-card p-8 bg-surface-container-low border border-outline-variant rounded-2xl smooth-transition flex flex-col h-full transition-all duration-700 opacity-100 translate-y-0">
 <span class="material-symbols-outlined text-secondary text-4xl mb-6">security</span>
 <h3 class="font-headline-md text-primary mb-4 text-2xl">Assédio e Dano Moral</h3>
 <p class="font-body-md text-on-surface-variant flex-grow">Proteção contra ambientes de trabalho tóxicos, discriminação e violações à dignidade do trabalhador.</p>
@@ -191,59 +212,81 @@
 <section class="py-section-padding bg-primary text-on-primary overflow-hidden" id="about">
 <div class="px-gutter max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 <div class="relative">
-<div class="aspect-square border-4 border-secondary absolute -top-8 -left-8 w-full h-full z-0 hidden md:block"></div>
-<img alt="Advocacia de Elite" class="relative z-10 w-full h-[500px] object-cover grayscale-[20%]" data-alt="A focused close-up of a professional law office desk with a heavy wooden texture, featuring an antique justice scale and leather-bound law books. The lighting is warm and cinematic, casting soft shadows across the desk and highlighting the rich textures of the materials. The atmosphere is quiet, intellectual, and projects a deep sense of tradition and legal authority, maintaining the sophisticated navy and gold palette of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwtlpZ5hpF8Fx6nhngyXfI6DiQjf2VJT3VFX7l26rUpQNjyDJ4rzdq-n03fcRAF7ombzXBTHM9t2_lQiRrMMx1oebjW57UJI2u4E-CQBZ--ugq8sQbBetictJmZOxgzP6yQJd95rroNBrEO0mDFxzOhfk8Nag81IvGjEd7QgOlU7YZrDkJVYMIKy6e-je0PmPGgEGPVQYKI0YSIW7ydQII1AqpLMCnnQM2KLWpdQdoAB3FX0Km-vCafaP5WhODg4fix_GNPm5Ksew">
+<div class="aspect-square border-4 border-secondary absolute -top-8 -left-8 w-full h-full z-0 hidden md:block rounded-2xl opacity-60"></div>
+<img alt="Advocacia de Elite" class="relative z-10 w-full h-[500px] object-cover rounded-2xl grayscale-[20%]" data-alt="A focused close-up of a professional law office desk with a heavy wooden texture, featuring an antique justice scale and leather-bound law books. The lighting is warm and cinematic, casting soft shadows across the desk and highlighting the rich textures of the materials. The atmosphere is quiet, intellectual, and projects a deep sense of tradition and legal authority, maintaining the sophisticated navy and gold palette of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwtlpZ5hpF8Fx6nhngyXfI6DiQjf2VJT3VFX7l26rUpQNjyDJ4rzdq-n03fcRAF7ombzXBTHM9t2_lQiRrMMx1oebjW57UJI2u4E-CQBZ--ugq8sQbBetictJmZOxgzP6yQJd95rroNBrEO0mDFxzOhfk8Nag81IvGjEd7QgOlU7YZrDkJVYMIKy6e-je0PmPGgEGPVQYKI0YSIW7ydQII1AqpLMCnnQM2KLWpdQdoAB3FX0Km-vCafaP5WhODg4fix_GNPm5Ksew">
 </div>
 <div>
 <h2 class="font-display-lg text-headline-md mb-stack-lg text-secondary-fixed">Experiência e Autoridade</h2>
-<p class="font-body-lg text-on-primary-container mb-stack-md">Com anos de atuação exclusiva na esfera trabalhista, o Dr. Renato Mota consolidou uma trajetória de sucesso baseada na ética inabalável e no compromisso total com o resultado de seus clientes.</p>
-<p class="font-body-md text-on-primary-container mb-8">Nossa abordagem combina o conhecimento profundo da jurisprudência moderna com uma estratégia agressiva de defesa dos interesses do trabalhador, seja em negociações extrajudiciais ou em complexos processos litigiosos.</p>
-<div class="grid grid-cols-2 gap-stack-lg pt-8 border-t border-on-primary-container/20">
+<p class="font-body-lg text-primary-fixed-dim mb-stack-md">Com anos de atuação exclusiva na esfera trabalhista, o Dr. Renato Mota consolidou uma trajetória de sucesso baseada na ética inabalável e no compromisso total com o resultado de seus clientes.</p>
+<p class="font-body-md text-primary-fixed-dim mb-8">Nossa abordagem combina o conhecimento profundo da jurisprudência moderna com uma estratégia agressiva de defesa dos interesses do trabalhador, seja em negociações extrajudiciais ou em complexos processos litigiosos.</p>
+<div class="grid grid-cols-2 gap-stack-lg pt-8 border-t border-primary-fixed-dim/20">
 <div>
 <div class="text-3xl font-display-lg text-secondary">15+</div>
-<div class="font-label-caps text-label-caps">Anos de Experiência</div>
+<div class="font-label-caps text-label-caps text-primary-fixed-dim">Anos de Experiência</div>
 </div>
 <div>
 <div class="text-3xl font-display-lg text-secondary">1k+</div>
-<div class="font-label-caps text-label-caps">Causas Vencidas</div>
+<div class="font-label-caps text-label-caps text-primary-fixed-dim">Causas Vencidas</div>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- CTA Section -->
-
+<section id="contact" class="py-section-padding bg-surface-container border-t border-outline-variant/40">
+    <div class="px-gutter max-w-container-max mx-auto text-center">
+        <h2 class="font-display-lg text-headline-md text-primary mb-4">Entre em Contato</h2>
+        <p class="font-body-lg text-on-surface-variant mb-8 max-w-2xl mx-auto leading-relaxed">
+            Fale diretamente com o Dr. Renato Mota e garanta a melhor defesa para os seus direitos trabalhistas.
+        </p>
+        <a class="inline-flex items-center justify-center gap-2 bg-on-tertiary-container text-on-tertiary px-8 py-4 rounded-lg font-button hover:bg-tertiary-container smooth-transition shadow-md hover:shadow-xl group scale-100 hover:scale-[1.02] active:scale-95" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer">
+            <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.452 5.421 1.453 5.431 0 9.849-4.409 9.852-9.843.002-2.633-1.02-5.107-2.879-6.969-1.859-1.862-4.332-2.885-6.966-2.886-5.438 0-9.855 4.41-9.858 9.845-.001 1.96.512 3.878 1.488 5.584l-.975 3.561 3.658-.96zM18.252 15.01c-.342-.172-2.029-.999-2.336-1.112-.307-.113-.53-.169-.753.169-.223.338-.863 1.092-1.058 1.316-.195.225-.39.25-.732.079-.342-.172-1.442-.53-2.748-1.696-1.016-.906-1.702-2.026-1.901-2.364-.199-.338-.02-.52.151-.69.154-.154.342-.399.513-.599.17-.199.227-.342.342-.57.114-.227.057-.426-.029-.597-.085-.17-.753-1.812-1.03-2.482-.27-.648-.54-.56-.753-.56-.195-.005-.419-.006-.643-.006-.223 0-.586.084-.892.422-.306.338-1.17 1.144-1.17 2.788 0 1.644 1.196 3.23 1.363 3.455.167.225 2.353 3.593 5.7 5.039.797.344 1.418.549 1.902.705.801.254 1.531.218 2.107.132.642-.096 2.029-.828 2.312-1.629.283-.8 1.252-2.88 1.252-2.88z"/>
+            </svg>
+            Falar via WhatsApp
+        </a>
+    </div>
+</section>
 </main>
 <!-- Footer -->
 <footer class="bg-primary py-stack-lg text-on-primary">
 <div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
 <div class="font-display-lg text-headline-md text-on-primary">RENATO MOTA</div>
 <div class="text-center md:text-left font-body-md text-on-primary/70 max-w-xs"><p class="">Augusto de Lima, 1800, Conj. 1209, Barro Preto, Belo Horizonte, Minas Gerais.</p><p class="mt-2">Aberto das 08:00 às 18:00</p></div><div class="flex gap-stack-lg items-center">
-<a class="text-on-primary/70 hover:text-secondary-container transition-colors" href="#">Privacy Policy</a>
-<a class="text-on-primary/70 hover:text-secondary-container transition-colors" href="#">Terms of Service</a>
-<a class="group" href="#">
-<svg class="w-6 h-6 fill-on-primary/70 group-hover:fill-secondary-container transition-colors" viewBox="0 0 24 24">
+<a class="text-on-primary/70 hover:text-secondary-container transition-colors" href="#">Política de Privacidade</a>
+<a class="text-on-primary/70 hover:text-secondary-container transition-colors" href="#">Termos de Serviço</a>
+<!-- Instagram Link -->
+<a class="group p-2 bg-blue-950/40 rounded-full hover:bg-secondary smooth-transition" href="https://www.instagram.com/renatomota_adv/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<svg class="w-6 h-6 fill-on-primary/70 group-hover:fill-white transition-colors" viewBox="0 0 24 24">
 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
 </svg>
 </a>
 </div>
-<p class="font-body-md text-on-primary/70">© 2024 Renato Mota Advocacia. All rights reserved.</p>
+<p class="font-body-md text-on-primary/70">© 2024 Renato Mota Advocacia. Todos os direitos reservados.</p>
 </div>
 </footer>
 <!-- Floating WhatsApp Button -->
-<a class="fixed bottom-8 right-8 z-50 bg-on-tertiary-container text-on-tertiary w-16 h-16 rounded-full flex items-center justify-center shadow-md hover:shadow-xl hover:scale-110 transition-transform animate-bounce group" href="https://wa.me/5531988425335">
-<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">chat</span>
+<a class="fixed bottom-8 right-8 z-50 bg-on-tertiary-container text-on-tertiary w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-transform animate-bounce group" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer" aria-label="Falar via WhatsApp">
+<svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
+    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.452 5.421 1.453 5.431 0 9.849-4.409 9.852-9.843.002-2.633-1.02-5.107-2.879-6.969-1.859-1.862-4.332-2.885-6.966-2.886-5.438 0-9.855 4.41-9.858 9.845-.001 1.96.512 3.878 1.488 5.584l-.975 3.561 3.658-.96zM18.252 15.01c-.342-.172-2.029-.999-2.336-1.112-.307-.113-.53-.169-.753.169-.223.338-.863 1.092-1.058 1.316-.195.225-.39.25-.732.079-.342-.172-1.442-.53-2.748-1.696-1.016-.906-1.702-2.026-1.901-2.364-.199-.338-.02-.52.151-.69.154-.154.342-.399.513-.599.17-.199.227-.342.342-.57.114-.227.057-.426-.029-.597-.085-.17-.753-1.812-1.03-2.482-.27-.648-.54-.56-.753-.56-.195-.005-.419-.006-.643-.006-.223 0-.586.084-.892.422-.306.338-1.17 1.144-1.17 2.788 0 1.644 1.196 3.23 1.363 3.455.167.225 2.353 3.593 5.7 5.039.797.344 1.418.549 1.902.705.801.254 1.531.218 2.107.132.642-.096 2.029-.828 2.312-1.629.283-.8 1.252-2.88 1.252-2.88z"/>
+</svg>
 <!-- Tooltip -->
 <span class="absolute right-20 bg-primary text-on-primary px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none shadow-lg">
-            Need Legal Help?
+            Falar com Especialista
         </span>
 </a>
 <script>
-        // Simple mobile menu toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        btn.addEventListener('click', () => {
-            // Logically expand/collapse mobile nav if needed
-            alert('Menu mobile placeholder - navegação disponível para desktop.');
+        // Toggle mobile menu
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Close menu on link click
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
         });
 
         // Intersection Observer for fade-in effects
