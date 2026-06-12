@@ -19,6 +19,30 @@
         .smooth-transition {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
+        /* Infinite Marquee Animation (Scrolls Left) */
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-33.333%); }
+        }
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 30s linear infinite;
+        }
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Typewriter Blinking Cursor Animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: currentColor }
+        }
+        .typewriter-cursor {
+            border-right: 3px solid currentColor;
+            animation: blink-caret 0.75s step-end infinite;
+        }
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -155,7 +179,8 @@
     <!-- Left Column (Content) -->
     <div class="md:col-span-7 text-on-primary">
         <span class="inline-block font-label-caps text-label-caps text-secondary-fixed mb-stack-md bg-secondary/20 px-3 py-1 rounded">ESPECIALISTA EM DIREITO DO TRABALHO</span>
-        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg leading-tight">Protegendo Seus Direitos e Garantindo Sua Justiça no Trabalho.</h1>
+        <!-- Typewriter Heading Container -->
+        <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg leading-tight min-h-[120px] md:min-h-[180px]"><span id="typewriter-text" class="pr-1">Protegendo Seus Direitos e Garantindo Sua Justiça no Trabalho.</span></h1>
         <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-stack-lg leading-relaxed">Representação jurídica de elite para trabalhadores que buscam o que é justo. Atuação estratégica em causas trabalhistas complexas.</p>
         <div class="flex flex-col sm:flex-row gap-4">
             <a class="inline-flex items-center justify-center gap-2 bg-on-tertiary-container text-on-tertiary px-8 py-4 rounded-lg font-button hover:bg-tertiary-container smooth-transition shadow-md hover:shadow-xl group scale-100 hover:scale-[1.02] active:scale-95" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer">
@@ -179,6 +204,66 @@
 </div>
 </div>
 </section>
+
+<!-- Infinite Scrolling Text Marquee Separator (Moves Left) -->
+<div class="relative overflow-hidden w-full bg-primary text-on-primary py-3.5 border-y border-outline-variant/10 select-none">
+    <div class="marquee-track flex items-center gap-12 whitespace-nowrap">
+        <!-- Set 1 -->
+        <span class="font-label-caps text-xs tracking-wider font-semibold">DEFESA DO TRABALHADOR</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">COBRANÇA DE HORAS EXTRAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">REVERSÃO DE JUSTA CAUSA</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">ASSÉDIO &amp; DANO MORAL</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">VERBAS RESCISÓRIAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">ACIDENTE DE TRABALHO</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">RECONHECIMENTO DE VÍNCULO</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">FGTS E MULTAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+
+        <!-- Set 2 (Duplicate for Loop) -->
+        <span class="font-label-caps text-xs tracking-wider font-semibold">DEFESA DO TRABALHADOR</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">COBRANÇA DE HORAS EXTRAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">REVERSÃO DE JUSTA CAUSA</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">ASSÉDIO &amp; DANO MORAL</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">VERBAS RESCISÓRIAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">ACIDENTE DE TRABALHO</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">RECONHECIMENTO DE VÍNCULO</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">FGTS E MULTAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+
+        <!-- Set 3 (Duplicate for safety on wide screens) -->
+        <span class="font-label-caps text-xs tracking-wider font-semibold">DEFESA DO TRABALHADOR</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">COBRANÇA DE HORAS EXTRAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">REVERSÃO DE JUSTA CAUSA</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">ASSÉDIO &amp; DANO MORAL</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">VERBAS RESCISÓRIAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">ACIDENTE DE TRABALHO</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">RECONHECIMENTO DE VÍNCULO</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+        <span class="font-label-caps text-xs tracking-wider font-semibold">FGTS E MULTAS</span>
+        <span class="text-secondary opacity-50 text-lg">•</span>
+    </div>
+</div>
+
 <!-- Specialties Section -->
 <section class="py-section-padding bg-surface" id="services">
 <div class="px-gutter max-w-container-max mx-auto">
@@ -266,7 +351,7 @@
 </div>
 </footer>
 <!-- Floating WhatsApp Button -->
-<a class="fixed bottom-8 right-8 z-50 bg-on-tertiary-container text-on-tertiary w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-transform animate-bounce group" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer" aria-label="Falar via WhatsApp">
+<a class="fixed bottom-8 right-8 z-50 bg-[#25d366] text-white w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-transform animate-bounce group" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer" aria-label="Falar via WhatsApp">
 <svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.452 5.421 1.453 5.431 0 9.849-4.409 9.852-9.843.002-2.633-1.02-5.107-2.879-6.969-1.859-1.862-4.332-2.885-6.966-2.886-5.438 0-9.855 4.41-9.858 9.845-.001 1.96.512 3.878 1.488 5.584l-.975 3.561 3.658-.96zM18.252 15.01c-.342-.172-2.029-.999-2.336-1.112-.307-.113-.53-.169-.753.169-.223.338-.863 1.092-1.058 1.316-.195.225-.39.25-.732.079-.342-.172-1.442-.53-2.748-1.696-1.016-.906-1.702-2.026-1.901-2.364-.199-.338-.02-.52.151-.69.154-.154.342-.399.513-.599.17-.199.227-.342.342-.57.114-.227.057-.426-.029-.597-.085-.17-.753-1.812-1.03-2.482-.27-.648-.54-.56-.753-.56-.195-.005-.419-.006-.643-.006-.223 0-.586.084-.892.422-.306.338-1.17 1.144-1.17 2.788 0 1.644 1.196 3.23 1.363 3.455.167.225 2.353 3.593 5.7 5.039.797.344 1.418.549 1.902.705.801.254 1.531.218 2.107.132.642-.096 2.029-.828 2.312-1.629.283-.8 1.252-2.88 1.252-2.88z"/>
 </svg>
@@ -287,6 +372,27 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
+        });
+
+        // Typewriter Writing Animation for main heading
+        document.addEventListener('DOMContentLoaded', () => {
+            const text = "Protegendo Seus Direitos e Garantindo Sua Justiça no Trabalho.";
+            const element = document.getElementById('typewriter-text');
+            if (element) {
+                element.innerHTML = ""; // Clear for animation
+                element.classList.add('typewriter-cursor');
+                let index = 0;
+                function type() {
+                    if (index < text.length) {
+                        element.innerHTML = text.slice(0, index + 1);
+                        index++;
+                        setTimeout(type, 50); // Speed of typewriter
+                    } else {
+                        element.classList.remove('typewriter-cursor');
+                    }
+                }
+                setTimeout(type, 300); // Small initial delay
+            }
         });
 
         // Intersection Observer for fade-in effects
