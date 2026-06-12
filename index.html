@@ -176,19 +176,13 @@
 </div>
 <div class="relative z-10 px-gutter max-w-container-max mx-auto w-full">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-    <!-- Left Column (Content) -->
-    <div class="md:col-span-7 text-on-primary">
+    <!-- Left Column (Content) - Centered -->
+    <div class="md:col-span-7 text-on-primary text-center md:text-left flex flex-col items-center md:items-start">
         <span class="inline-block font-label-caps text-label-caps text-secondary-fixed mb-stack-md bg-secondary/20 px-3 py-1 rounded">ESPECIALISTA EM DIREITO DO TRABALHO</span>
         <!-- Typewriter Heading Container -->
         <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg leading-tight min-h-[120px] md:min-h-[180px]"><span id="typewriter-text" class="pr-1">Protegendo Seus Direitos e Garantindo Sua Justiça no Trabalho.</span></h1>
-        <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-stack-lg leading-relaxed">Representação jurídica de elite para trabalhadores que buscam o que é justo. Atuação estratégica em causas trabalhistas complexas.</p>
-        <div class="flex flex-col sm:flex-row gap-4">
-            <a class="inline-flex items-center justify-center gap-2 bg-on-tertiary-container text-on-tertiary px-8 py-4 rounded-lg font-button hover:bg-tertiary-container smooth-transition shadow-md hover:shadow-xl group scale-100 hover:scale-[1.02] active:scale-95" href="https://wa.me/5531988425335" target="_blank" rel="noopener noreferrer">
-                <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.452 5.421 1.453 5.431 0 9.849-4.409 9.852-9.843.002-2.633-1.02-5.107-2.879-6.969-1.859-1.862-4.332-2.885-6.966-2.886-5.438 0-9.855 4.41-9.858 9.845-.001 1.96.512 3.878 1.488 5.584l-.975 3.561 3.658-.96zM18.252 15.01c-.342-.172-2.029-.999-2.336-1.112-.307-.113-.53-.169-.753.169-.223.338-.863 1.092-1.058 1.316-.195.225-.39.25-.732.079-.342-.172-1.442-.53-2.748-1.696-1.016-.906-1.702-2.026-1.901-2.364-.199-.338-.02-.52.151-.69.154-.154.342-.399.513-.599.17-.199.227-.342.342-.57.114-.227.057-.426-.029-.597-.085-.17-.753-1.812-1.03-2.482-.27-.648-.54-.56-.753-.56-.195-.005-.419-.006-.643-.006-.223 0-.586.084-.892.422-.306.338-1.17 1.144-1.17 2.788 0 1.644 1.196 3.23 1.363 3.455.167.225 2.353 3.593 5.7 5.039.797.344 1.418.549 1.902.705.801.254 1.531.218 2.107.132.642-.096 2.029-.828 2.312-1.629.283-.8 1.252-2.88 1.252-2.88z"/>
-                </svg>
-                Falar via WhatsApp
-            </a>
+        <p class="font-body-lg text-body-lg text-primary-fixed-dim mb-stack-lg leading-relaxed max-w-lg">Representação jurídica de elite para trabalhadores que buscam o que é justo. Atuação estratégica em causas trabalhistas complexas.</p>
+        <div class="flex justify-center md:justify-start">
             <a class="inline-flex items-center justify-center gap-2 border border-outline-variant text-on-primary px-8 py-4 rounded-lg font-button hover:bg-white/10 smooth-transition" href="#services">
                 Conheça as Especialidades
             </a>
@@ -317,6 +311,72 @@
 </div>
 </div>
 </section>
+
+<!-- Interactive Case Diagnosis Section -->
+<section id="contact" class="py-24 bg-surface relative overflow-hidden">
+    <!-- Decorative background -->
+    <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl"></div>
+    </div>
+    <div class="relative z-10 px-gutter max-w-container-max mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12">
+            <span class="inline-block font-label-caps text-label-caps text-secondary tracking-widest bg-secondary/10 px-4 py-1.5 rounded-full mb-4">ATENDIMENTO RÁPIDO</span>
+            <h2 class="font-display-lg text-headline-md text-primary mb-4">Diagnóstico do Seu Caso</h2>
+            <p class="font-body-lg text-on-surface-variant max-w-xl mx-auto leading-relaxed">Selecione o seu problema, adicione detalhes e envie direto para o Dr. Renato Mota via WhatsApp.</p>
+        </div>
+
+        <!-- Step 1: Problem cards -->
+        <div id="diag-step-1" class="max-w-3xl mx-auto">
+            <p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest mb-5 text-center">PASSO 1 — Qual é o seu problema?</p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8" id="problem-grid">
+                <!-- Cards injected by JS -->
+            </div>
+            <p class="text-center text-on-surface-variant/60 text-xs font-body-md">Você pode selecionar mais de uma opção</p>
+        </div>
+
+        <!-- Step 2: Details -->
+        <div id="diag-step-2" class="max-w-2xl mx-auto hidden mt-2">
+            <p class="font-label-caps text-label-caps text-on-surface-variant tracking-widest mb-5 text-center">PASSO 2 — Conte um pouco mais (opcional)</p>
+            <div class="space-y-4">
+                <div>
+                    <label class="block font-body-md text-sm text-on-surface-variant mb-2" for="diag-name">Seu nome</label>
+                    <input id="diag-name" type="text" placeholder="Ex: Maria Silva" class="w-full border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary transition placeholder:text-on-surface-variant/40">
+                </div>
+                <div>
+                    <label class="block font-body-md text-sm text-on-surface-variant mb-2" for="diag-details">Descreva brevemente sua situação</label>
+                    <textarea id="diag-details" rows="4" placeholder="Ex: Fui demitido sem justa causa e não recebi o FGTS..." class="w-full border border-outline-variant rounded-xl px-4 py-3 font-body-md text-on-surface bg-surface-container-low focus:outline-none focus:ring-2 focus:ring-secondary transition resize-none placeholder:text-on-surface-variant/40"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Summary preview -->
+        <div id="diag-summary" class="max-w-2xl mx-auto mt-6 hidden">
+            <div class="bg-surface-container border border-outline-variant/50 rounded-2xl p-5">
+                <p class="font-label-caps text-label-caps text-secondary tracking-widest mb-3">RESUMO DO SEU CASO</p>
+                <div id="summary-content" class="font-body-md text-on-surface-variant text-sm leading-relaxed"></div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+            <button id="diag-back-btn" onclick="diagBack()" class="hidden font-button text-on-surface-variant border border-outline-variant px-6 py-3 rounded-xl hover:bg-surface-container smooth-transition text-sm">
+                ← Voltar
+            </button>
+            <button id="diag-next-btn" onclick="diagNext()" disabled class="font-button px-8 py-4 rounded-xl smooth-transition shadow-md text-sm bg-secondary/40 text-white cursor-not-allowed" >
+                Próximo Passo →
+            </button>
+            <a id="diag-whatsapp-btn" href="#" target="_blank" rel="noopener noreferrer"
+               class="hidden inline-flex items-center gap-3 bg-[#25d366] text-white px-8 py-4 rounded-xl font-button hover:bg-[#128c7e] smooth-transition shadow-md hover:shadow-xl text-sm">
+                <svg class="w-5 h-5 fill-white" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.455L0 24zm6.59-4.846c1.6.95 3.498 1.452 5.421 1.453 5.431 0 9.849-4.409 9.852-9.843.002-2.633-1.02-5.107-2.879-6.969-1.859-1.862-4.332-2.885-6.966-2.886-5.438 0-9.855 4.41-9.858 9.845-.001 1.96.512 3.878 1.488 5.584l-.975 3.561 3.658-.96zM18.252 15.01c-.342-.172-2.029-.999-2.336-1.112-.307-.113-.53-.169-.753.169-.223.338-.863 1.092-1.058 1.316-.195.225-.39.25-.732.079-.342-.172-1.442-.53-2.748-1.696-1.016-.906-1.702-2.026-1.901-2.364-.199-.338-.02-.52.151-.69.154-.154.342-.399.513-.599.17-.199.227-.342.342-.57.114-.227.057-.426-.029-.597-.085-.17-.753-1.812-1.03-2.482-.27-.648-.54-.56-.753-.56-.195-.005-.419-.006-.643-.006-.223 0-.586.084-.892.422-.306.338-1.17 1.144-1.17 2.788 0 1.644 1.196 3.23 1.363 3.455.167.225 2.353 3.593 5.7 5.039.797.344 1.418.549 1.902.705.801.254 1.531.218 2.107.132.642-.096 2.029-.828 2.312-1.629.283-.8 1.252-2.88 1.252-2.88z"/></svg>
+                Enviar para WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Divider -->
+<div class="h-1 bg-gradient-to-r from-transparent via-secondary/40 to-transparent"></div>
 
 </main>
 <!-- Footer -->
@@ -455,6 +515,115 @@
             el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
             observer.observe(el);
         });
+
+        // ── Interactive Case Diagnosis ──────────────────────────────
+        const problems = [
+            { icon: '⏱️', label: 'Horas Extras não pagas' },
+            { icon: '📋', label: 'Demissão sem Justa Causa' },
+            { icon: '🚫', label: 'Justa Causa Indevida' },
+            { icon: '😤', label: 'Assédio Moral' },
+            { icon: '💊', label: 'Acidente de Trabalho' },
+            { icon: '💰', label: 'FGTS ou Verbas Rescisórias' },
+            { icon: '🔗', label: 'Vínculo Empregatício' },
+            { icon: '🤰', label: 'Discriminação / Demissão Injusta' },
+            { icon: '📑', label: 'Outro problema trabalhista' },
+        ];
+
+        let selectedProblems = new Set();
+        let currentStep = 1;
+
+        // Render cards
+        const grid = document.getElementById('problem-grid');
+        problems.forEach((p, i) => {
+            const btn = document.createElement('button');
+            btn.id = 'prob-' + i;
+            btn.className = 'problem-card flex flex-col items-center gap-2 p-4 border-2 border-outline-variant rounded-2xl bg-surface-container-low hover:border-secondary hover:bg-secondary/5 smooth-transition text-center cursor-pointer';
+            btn.innerHTML = `<span class="text-2xl">${p.icon}</span><span class="font-body-md text-on-surface text-sm leading-tight">${p.label}</span>`;
+            btn.addEventListener('click', () => toggleProblem(i, btn));
+            grid.appendChild(btn);
+        });
+
+        function toggleProblem(i, btn) {
+            if (selectedProblems.has(i)) {
+                selectedProblems.delete(i);
+                btn.classList.remove('border-secondary', 'bg-secondary/10', 'ring-2', 'ring-secondary/30');
+            } else {
+                selectedProblems.add(i);
+                btn.classList.add('border-secondary', 'bg-secondary/10', 'ring-2', 'ring-secondary/30');
+            }
+            const nextBtn = document.getElementById('diag-next-btn');
+            if (selectedProblems.size > 0) {
+                nextBtn.disabled = false;
+                nextBtn.className = 'font-button px-8 py-4 rounded-xl smooth-transition shadow-md text-sm bg-secondary text-white hover:bg-primary cursor-pointer';
+            } else {
+                nextBtn.disabled = true;
+                nextBtn.className = 'font-button px-8 py-4 rounded-xl smooth-transition shadow-md text-sm bg-secondary/40 text-white cursor-not-allowed';
+            }
+        }
+
+        function diagNext() {
+            if (currentStep === 1) {
+                document.getElementById('diag-step-1').classList.add('hidden');
+                document.getElementById('diag-step-2').classList.remove('hidden');
+                document.getElementById('diag-next-btn').textContent = 'Ver Resumo →';
+                document.getElementById('diag-back-btn').classList.remove('hidden');
+                currentStep = 2;
+            } else if (currentStep === 2) {
+                showSummary();
+                currentStep = 3;
+            }
+        }
+
+        function diagBack() {
+            if (currentStep === 2) {
+                document.getElementById('diag-step-2').classList.add('hidden');
+                document.getElementById('diag-step-1').classList.remove('hidden');
+                document.getElementById('diag-summary').classList.add('hidden');
+                document.getElementById('diag-next-btn').textContent = 'Próximo Passo →';
+                document.getElementById('diag-back-btn').classList.add('hidden');
+                document.getElementById('diag-whatsapp-btn').classList.add('hidden');
+                document.getElementById('diag-next-btn').classList.remove('hidden');
+                currentStep = 1;
+            } else if (currentStep === 3) {
+                document.getElementById('diag-summary').classList.add('hidden');
+                document.getElementById('diag-step-2').classList.remove('hidden');
+                document.getElementById('diag-next-btn').textContent = 'Ver Resumo →';
+                document.getElementById('diag-next-btn').classList.remove('hidden');
+                document.getElementById('diag-whatsapp-btn').classList.add('hidden');
+                currentStep = 2;
+            }
+        }
+
+        function showSummary() {
+            const name = document.getElementById('diag-name').value.trim();
+            const details = document.getElementById('diag-details').value.trim();
+            const selectedLabels = [...selectedProblems].map(i => problems[i].label);
+
+            // Build summary HTML
+            let html = '';
+            if (name) html += `<p class="mb-2"><strong>Nome:</strong> ${name}</p>`;
+            html += `<p class="mb-2"><strong>Problemas identificados:</strong></p><ul class="list-disc list-inside mb-2">`;
+            selectedLabels.forEach(l => { html += `<li>${l}</li>`; });
+            html += '</ul>';
+            if (details) html += `<p><strong>Detalhes:</strong> ${details}</p>`;
+
+            document.getElementById('summary-content').innerHTML = html;
+            document.getElementById('diag-step-2').classList.add('hidden');
+            document.getElementById('diag-summary').classList.remove('hidden');
+            document.getElementById('diag-next-btn').classList.add('hidden');
+            document.getElementById('diag-whatsapp-btn').classList.remove('hidden');
+
+            // Build WhatsApp message
+            let msg = 'Olá, Dr. Renato Mota! Gostaria de uma consulta.\n\n';
+            if (name) msg += `*Nome:* ${name}\n`;
+            msg += `*Meu problema:*\n`;
+            selectedLabels.forEach(l => { msg += `• ${l}\n`; });
+            if (details) msg += `\n*Detalhes:* ${details}`;
+            msg += '\n\nAguardo seu retorno!';
+
+            const url = 'https://wa.me/5531988425335?text=' + encodeURIComponent(msg);
+            document.getElementById('diag-whatsapp-btn').href = url;
+        }
     </script>
 
 
